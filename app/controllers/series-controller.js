@@ -19,9 +19,8 @@ angular.module('demoSite.series', ['ngRoute'])
             Season.setSeries($scope.allData);
         });
 
-        $scope.getSeasonData = function(i) {
-            Data.getData('http://www.omdbapi.com/?i=' + seriesID + '&season=' + i + '&plot=long&r=json').
-                then(function (response) {
+        $scope.getSeasonData = function (i) {
+            Data.getData('http://www.omdbapi.com/?i=' + seriesID + '&season=' + i + '&plot=long&r=json').then(function (response) {
                 $scope.seasonData = response.data;
                 Season.setSeason(response.data);
             });

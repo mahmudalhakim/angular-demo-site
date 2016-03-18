@@ -8,10 +8,8 @@ angular.module('demoSite', [
     'demoSite.season',
     'demoSite.databaseService',
     'demoSite.seasonService'
-]).
-config(['$routeProvider', function ($routeProvider) {
-    $routeProvider.
-    otherwise({redirectTo: '/search'});
+]).config(['$routeProvider', function ($routeProvider) {
+    $routeProvider.otherwise({redirectTo: '/search'});
 }]);
 
 

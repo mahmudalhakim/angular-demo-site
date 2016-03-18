@@ -12,7 +12,7 @@ angular.module('demoSite.movie', ['ngRoute'])
     .controller('MovieController', ['$scope', '$http', '$routeParams', 'Data', function ($scope, $http, $routeParams, Data) {
 
         var queryString = 'http://www.omdbapi.com/?i=' + $routeParams.imdbID + '&plot=full&r=json';
-        Data.getData(queryString).then(function(response) {
+        Data.getData(queryString).then(function (response) {
             $scope.allData = response.data;
         });
 

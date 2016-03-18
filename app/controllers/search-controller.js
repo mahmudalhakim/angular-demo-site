@@ -23,8 +23,8 @@ angular.module('demoSite.search', ['ngRoute'])
 
         function fetch() {
             setSearchQuery();
-            Data.getData(queryString).then(function(response) {
-               $scope.allData = response.data;
+            Data.getData(queryString).then(function (response) {
+                $scope.allData = response.data;
             });
         }
 

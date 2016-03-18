@@ -10,10 +10,6 @@
     </div>
 
     <div class="" ng-switch on="type">
-        <!--<div class="col-lg-1" ng-switch-when="series">-->
-        <!--<input class="form-control" type="text" ng-model="$parent.season" placeholder="season..">-->
-        <!--</div>-->
-
         <div class="col-lg-2" ng-switch-when="movie">
             <input class="form-control" type="text" ng-model="$parent.year" placeholder="year..">
         </div>
@@ -31,35 +27,17 @@
     <p>No matching results..</p>
 </div>
 
-<!--<div class="row" ng-if="allData.Response ==='True'" ng-repeat="movie in allData.Search | limitTo: 10">-->
-    <!--<div class="col-sm-2 col-md-2 col-lg-1">-->
-        <!--<div class="">-->
-            <!--<img ng-src="{{movie.Poster}}" class="img-thumbnail poster">-->
-        <!--</div>-->
-    <!--</div>-->
-    <!--<div class="col-sm2 col-md-4 container-fluid">-->
-        <!--<div>-->
-            <!--<h3>{{movie.Title}}</h3>{{movie.Year}} - {{movie.Type}}-->
-        <!--</div>-->
-        <!--<div>-->
-            <!--<blockquote>-->
-                <!--<p>{{movie.Plot}}</p>-->
-            <!--</blockquote>-->
-        <!--</div>-->
-        <!--<p><a href="#/{{type}}/{{movie.imdbID}}" class="btn btn-primary" role="button">More info</a></p>-->
-    <!--</div>-->
-<!--</div>-->
-
-
 <div class="row text-center" ng-if="allData.Response ==='True'">
 
-    <div class="col-md-3 col-sm-6 hero-feature" ng-repeat="movie in allData.Search | limitTo: 10">
+    <div class="col-md-3 col-sm-6 hero-feature" ng-repeat="movie in allData.Search | limitTo: 12">
         <div class="thumbnail search-thumb">
             <img ng-src="{{movie.Poster}}" alt="" ng-if="movie.Poster !== 'N/A'" class="poster-img img-thumbnail">
             <img ng-src="resources/no image.jpg" ng-if="movie.Poster === 'N/A'" class="poster-img img-thumbnail">
             <div class="caption">
                 <h4>{{movie.Title}}</h4>
-                <p class="text-muted"><small>{{movie.Year}} - {{movie.Type}}</small></p>
+                <p class="text-muted">
+                    <small>{{movie.Year}} - {{movie.Type}}</small>
+                </p>
                 <p>
                     <a href="#/{{type}}/{{movie.imdbID}}"
                        class="btn btn-primary btn-sm"

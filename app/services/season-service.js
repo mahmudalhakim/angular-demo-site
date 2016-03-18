@@ -7,19 +7,19 @@ seasonService.service('Season', function () {
     var season = '';
     var series = '';
 
-    var setSeason = function(seasonObject) {
+    var setSeason = function (seasonObject) {
         season = seasonObject;
     };
 
-    var getSeason = function() {
+    var getSeason = function () {
         return season;
     };
 
-    var setSeries = function(seriesObject) {
+    var setSeries = function (seriesObject) {
         series = seriesObject;
     };
 
-    var getSeries = function() {
+    var getSeries = function () {
         return series;
     };
 
