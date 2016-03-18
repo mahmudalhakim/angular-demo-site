@@ -1,0 +1,40 @@
+<div class="row" ng-if="allData.Response ==='True'">
+
+    <div class="col-md-3">
+        <img ng-src="{{allData.Poster}}" alt="" ng-if="allData.Poster !== 'N/A'" class="responsive img-thumbnail">
+        <img ng-src="resources/no image.jpg" ng-if="allData.Poster === 'N/A'" class="responsive img-thumbnail">
+        <p class="label label-success">Metascore: {{allData.Metascore}}</p>
+        <p class="label label-success">IMDb Rating: {{allData.imdbRating}}</p><br><br>
+        <a href="#/search" class="btn btn-primary btn-sm" role="button">Back to Search</a>
+    </div>
+
+    <div class="col-md-9">
+        <h3 class="movie-title"><a href="http://www.imdb.com/title/{{allData.imdbID}}">{{allData.Title}}</a>
+            <small>{{allData.Year}}. {{allData.Genre}}</small>
+        </h3>
+
+        <blockquote>{{allData.Plot}}</blockquote>
+
+        <h4>Movie Details</h4>
+
+        <p class="label label-default">Rated: {{allData.Rated}}</p>
+
+        <p><strong>Released:</strong> {{allData.Released}}</p>
+
+        <p><strong>Runtime:</strong> {{allData.Runtime}}</p>
+
+        <p><strong>Director:</strong> {{allData.Director}}</p>
+
+        <p><strong>Writer:</strong> {{allData.Writer}}</p>
+
+        <p><strong>Actors:</strong> {{allData.Actors}}</p>
+
+        <P><strong>Country:</strong> {{allData.Country}}</P>
+
+        <p><strong>Awards:</strong> {{allData.Awards}}</p>
+
+    </div>
+
+</div>
+
+

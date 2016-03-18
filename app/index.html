@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html la="eng" ng-app="demoSite">
+<head>
+    <meta charset="utf-8">
+    <title>Demo Site</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <header class="jumbotron hero-spacer">
+        <h1>This is a Angular demo site!</h1>
+        <p class="text-muted">Search for your favorite movies and series!</p>
+        </p>
+    </header>
+
+    <hr>
+
+    <div ng-view>
+    </div>
+
+    <hr>
+
+    <footer>
+        <div class="row">
+            <div class="col-lg-12">
+                <p class="text-muted">Copyright &copy; Angular Demo Site 2016</p>
+            </div>
+        </div>
+    </footer>
+
+</div>
+
+<!-- Angular dependencies -->
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/angular-resource/angular-resource.js"></script>
+<script src="app.js"></script>
+
+<!-- Controllers !-->
+<script src="controllers/search-controller.js"></script>
+<script src="controllers/movie-controller.js"></script>
+<script src="controllers/series-controller.js"></script>
+<script src="controllers/season-controller.js"></script>
+
+<!-- Services -->
+<script src="services/data-service.js"></script>
+<script src="services/season-service.js"></script>
+
+<script src="bower_components/angular-loader/angular-loader.js"></script>
+</body>
+</html>
