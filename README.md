@@ -6,6 +6,8 @@ To run it:
 
 Make sure you have node.js and npm installed.
 
+Follow the prerequisite steps in this [link](https://github.com/nodejs/node-gyp) for your specific OS.
+
 Clone the repository.
 
 Change directory to the project root, run: `npm install`
